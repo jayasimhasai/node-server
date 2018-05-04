@@ -33,7 +33,7 @@ app.use(express.static(__dirname+'/public'));
 app.get('/',(req,res)=>{
 	//res.send('<h1>Hello welcome to sai server<h1>');
 	res.render('template.hbs',{
-		pageTitle:"Home",
+		pageTitle:"Home"
 	});
 });
 app.get('/bad',(req,res)=>{
@@ -43,7 +43,12 @@ app.get('/bad',(req,res)=>{
 })
 app.get('/about',(req,res)=>{
 	res.render('template.hbs',{
-		pageTitle: "About",
+		pageTitle: "About"
+	});
+});
+app.get('/projects',(req,res)=>{
+	res.render('projects.hbs',{
+		pageTitle: "Projects"
 	});
 });
 app.listen(	port, () =>{
